@@ -1,0 +1,9 @@
+{
+  "name": "ShopVista Toko Online",
+  "description": "Aplikasi Toko Online Modern & Multi-Fitur dengan manajemen produk, pelacakan kurir live, cetak resi thermal 100x165mm, dan admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+

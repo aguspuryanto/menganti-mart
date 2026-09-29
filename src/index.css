@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@media print {
+  /* Hide all app elements during thermal printing except the printable target */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .thermal-receipt-print-wrapper,
+  .thermal-receipt-print-wrapper * {
+    visibility: visible;
+  }
+  .thermal-receipt-print-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100mm !important;
+    min-height: 165mm !important;
+    max-height: 165mm !important;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 4mm !important;
+    box-sizing: border-box;
+    page-break-after: always;
+  }
+  .no-print {
+    display: none !important;
+  }
+  @page {
+    size: 100mm 165mm;
+    margin: 0;
+  }
+}
+
